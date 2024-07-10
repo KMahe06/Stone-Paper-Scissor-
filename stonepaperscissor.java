@@ -22,7 +22,6 @@ public class StonePaperScissors {
                 break;
             }
 
-            // Validate user input
             if (!userChoice.equalsIgnoreCase("Stone") && 
                 !userChoice.equalsIgnoreCase("Paper") && 
                 !userChoice.equalsIgnoreCase("Scissors")) {
@@ -30,12 +29,10 @@ public class StonePaperScissors {
                 continue;
             }
 
-            // Generate computer choice
             computerChoiceIndex = random.nextInt(3); // 0, 1, or 2
             computerChoice = choices[computerChoiceIndex];
             System.out.println("Computer's choice: " + computerChoice);
 
-            // Determine the winner
             if (userChoice.equalsIgnoreCase(computerChoice)) {
                 System.out.println("It's a tie!");
             } else if ((userChoice.equalsIgnoreCase("Stone") && computerChoice.equals("Scissors")) ||
